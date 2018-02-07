@@ -1,0 +1,20 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": 0,
+        "Name": "SMF30ACL",
+        "Length": "1",
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Length of accounting section (excluding this field)."
+    },
+    {
+        "Offsets": 1,
+        "OffHex": 1,
+        "Name": "SMF30ACT",
+        "Length": "variable",
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Job or step accounting field."
+    }
+]

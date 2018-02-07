@@ -1,0 +1,47 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": "0",
+        "Name": "SMF30TYP",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Subtype identification"
+    },
+    {
+        "Offsets": 6,
+        "OffHex": "6",
+        "Name": "SMF30PNM",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Subsystem or product name, for example SMF."
+    },
+    {
+        "Offsets": 14,
+        "OffHex": "E",
+        "Name": "SMF30OSL",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Code string for the operating system level to represent the version, release, and modification level as described for CVTPRODN. Guaranteed to be larger in each release."
+    },
+    {
+        "Offsets": 22,
+        "OffHex": "16",
+        "Name": "SMF30SYN",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "System name (from the SYSNAME parameter in the IEASYSxx parmlib member)."
+    },
+    {
+        "Offsets": 30,
+        "OffHex": "1E",
+        "Name": "SMF30SYP",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Sysplex name (from the SYSPLEX parameter in the COUPLExx parmlib member)."
+    }
+]

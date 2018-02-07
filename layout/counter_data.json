@@ -1,0 +1,119 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": 0,
+        "Name": "SMF30InstFlgs1MRS",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Instruction Counter related flags. If a bit in this byte is on in the subtype 2/3 record, it is on in the subtype 4 record. Similarly, this holds between subtype 4 and subtype 5 records."
+    },
+    {
+        "Offsets": 1,
+        "OffHex": 1,
+        "Name": "missed_1",
+        "Length": 7,
+        "Format": "none",
+        "type":"none",
+        "Description": "Reserved"
+    },
+    {
+        "Offsets": 8,
+        "OffHex": 8,
+        "Name": "SMF30_Inst_CP_Task",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "The number of instructions executed while running on a standard processor as a task when it is not eligible for an offload processor and it is not associated with an enclave."
+    },
+    {
+        "Offsets": 16,
+        "OffHex": 10,
+        "Name": "SMF30_Inst_CP_NonPreemptSRB",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "The number of instructions executed while running on a standard processor as a non-preemptable SRB."
+    },
+    {
+        "Offsets": 24,
+        "OffHex": 18,
+        "Name": "SMF30_Inst_CP_PreemptSRB",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "The number of instructions executed while running on a standard processor as a preemptable or client SRB when it is not associated with an enclave."
+    },
+    {
+        "Offsets": 32,
+        "OffHex": 20,
+        "Name": "SMF30_Inst_Offload",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "The number of instructions executed while running on an offload processor when not associated with an enclave."
+    },
+    {
+        "Offsets": 40,
+        "OffHex": 28,
+        "Name": "SMF30_Inst_OffloadOnCP",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "The number of instructions executed while running on a standard processor as eligible for an offload processor while not associated with an enclave."
+    },
+    {
+        "Offsets": 48,
+        "OffHex": 30,
+        "Name": "SMF30_Inst_CP_Enclave",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "The number of instructions executed while running on a standard processor as not eligible for an offload processor for an independent enclave."
+    },
+    {
+        "Offsets": 56,
+        "OffHex": 38,
+        "Name": "SMF30_Inst_Offload_Enclave",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "The number of instructions executed while running on an offload processor for an independent enclave."
+    },
+    {
+        "Offsets": 64,
+        "OffHex": 40,
+        "Name": "SMF30_Inst_OffloadOnCP_Enclave",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "The number of instructions executed while running on a standard processor as eligible for an offload processor for an independent enclave."
+    },
+    {
+        "Offsets": 72,
+        "OffHex": 48,
+        "Name": "SMF30_Inst_CP_DepEnc",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "The number of instructions executed while running on a standard processor as not eligible for an offload processor for a dependent enclave."
+    },
+    {
+        "Offsets": 80,
+        "OffHex": 50,
+        "Name": "SMF30_Inst_Offload_DepEnc",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "The number of instructions executed while running on an offload processor for a dependent enclave."
+    },
+    {
+        "Offsets": 88,
+        "OffHex": 58,
+        "Name": "SMF30_Inst_OffloadOnCP_DepEnc",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "The number of instructions executed while running on a standard processor as eligible for an offload processor for a dependent enclave."
+    }
+]

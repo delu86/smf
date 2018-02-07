@@ -1,0 +1,461 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": "0",
+        "Name": "SMF30RSV",
+        "Length": 2,
+        "Format": null,
+        "type":null,
+        "Description": "Reserved. Note that SMF30RGN, formerly a two-byte field at this offset, has been increased to four bytes and moved to the end of the Storage and Paging Section."
+    },
+    {
+        "Offsets": 2,
+        "OffHex": "2",
+        "Name": "SMF30SFL",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Storage Flags. If storage was not allocated (job step was flushed), these fields equal zero."
+    },
+    {
+        "Offsets": 3,
+        "OffHex": "3",
+        "Name": "SMF30SPK",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Storage protect key, in the form xxxx0000 , where xxxx is the key."
+    },
+    {
+        "Offsets": 4,
+        "OffHex": "4",
+        "Name": "SMF30PRV",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Largest amount of storage used from bottom of private area, in 1 K units. This storage area includes subpools 0-127, 129\u2013132, 244, 251 and 252. If ADDRSPC=REAL is specified, this field equals the amount of contiguous real storage that was used."
+    },
+    {
+        "Offsets": 6,
+        "OffHex": "6",
+        "Name": "SMF30SYS",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Largest amount of storage used from top of private area, in 1K units. This storage area includes the local system queue area (LSQA) and the SWA \u2014 subpools 229, 230, 236, 237, 249, and 253-255. If ADDRSPC=REAL is specified, this field equals the amount of storage used that was not from the contiguous real storage reserved for the program."
+    },
+    {
+        "Offsets": 8,
+        "OffHex": "8",
+        "Name": "SMF30PGI",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of pages that were paged in from auxiliary storage."
+    },
+    {
+        "Offsets": 12,
+        "OffHex": "C",
+        "Name": "SMF30PGO",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of pages that were paged out to auxiliary storage."
+    },
+    {
+        "Offsets": 16,
+        "OffHex": "10",
+        "Name": "SMF30CPM",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of attempts to read data from an ESO hiperspace that were not satisfied because the data has been deleted."
+    },
+    {
+        "Offsets": 20,
+        "OffHex": "14",
+        "Name": "SMF30NSW",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of address space swap sequences. (A swap sequence consists of an address space swap-out and swap-in. Logical swap-out and swap-in are not included.)"
+    },
+    {
+        "Offsets": 24,
+        "OffHex": "18",
+        "Name": "SMF30PSI",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of pages swapped in from auxiliary storage to central storage. This field includes: (local system queue area (LSQA), fixed pages, and pages that the real storage manager determined to be active when the address space was swapping in. It does not include page reclaims or pages found in storage during the swap-in process (such as pages brought in by the service request blocks (SRB), started after completion of swap-in Stage 1 processing)."
+    },
+    {
+        "Offsets": 28,
+        "OffHex": "1C",
+        "Name": "SMF30PSO",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of pages swapped out from central storage to auxiliary storage. This field includes: local system queue area (LSQA), private area fixed pages, and private area non-fixed changed pages."
+    },
+    {
+        "Offsets": 32,
+        "OffHex": "20",
+        "Name": "SMF30VPI",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of VIO page-ins from auxiliary storage to central storage for this step. This field includes page-ins resulting from page faults or specific page requests on a VIO window. It does not include VIO swap-ins or page-ins for the common area."
+    },
+    {
+        "Offsets": 36,
+        "OffHex": "24",
+        "Name": "SMF30VPO",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of VIO page-outs from central storage to auxiliary storage for this step. This field includes page-outs resulting from specific page requests on a VIO window as well as those pages stolen by the paging supervisor through infrequent use. It does not include VIO swap-outs or page-outs for the common area."
+    },
+    {
+        "Offsets": 40,
+        "OffHex": "28",
+        "Name": "SMF30VPR",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of VIO reclaims."
+    },
+    {
+        "Offsets": 44,
+        "OffHex": "2C",
+        "Name": "SMF30CPI",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of common area page-ins (LPA + CSA) from auxiliary storage to central storage."
+    },
+    {
+        "Offsets": 48,
+        "OffHex": "30",
+        "Name": "SMF30HPI",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of hiperspace page-ins from auxiliary to processor storage."
+    },
+    {
+        "Offsets": 52,
+        "OffHex": "34",
+        "Name": "SMF30LPI",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of LPA page-ins from auxiliary storage to central storage."
+    },
+    {
+        "Offsets": 56,
+        "OffHex": "38",
+        "Name": "SMF30HPO",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of hiperspace page-outs from processor to auxiliary storage."
+    },
+    {
+        "Offsets": 60,
+        "OffHex": "3C",
+        "Name": "SMF30PST",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of pages stolen from this address space."
+    },
+    {
+        "Offsets": 64,
+        "OffHex": "40",
+        "Name": "SMF30PSC",
+        "Length": 8,
+        "Format": "binary",
+        "type":"ms_units",
+        "Description": "Number of CPU page seconds for this address space, in page millisecond units. (A page millisecond unit equals 1.024 milliseconds.)"
+    },
+    {
+        "Offsets": 72,
+        "OffHex": "48",
+        "Name": "SMF30RGB",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Private area size in bytes (less than 16 megabytes)."
+    },
+    {
+        "Offsets": 76,
+        "OffHex": "40",
+        "Name": "SMF30ERG",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Private area size in bytes (greater than 16 megabytes)."
+    },
+    {
+        "Offsets": 80,
+        "OffHex": "50",
+        "Name": "SMF30ARB",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Maximum virtual storage in bytes allocated from the local system queue area (LSQA) and the SWA subpools (less than 16 megabytes)."
+    },
+    {
+        "Offsets": 84,
+        "OffHex": "54",
+        "Name": "SMF30EAR",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Maximum virtual storage in bytes allocated from the local system queue area (LSQA) and the SWA subpools (greater than 16 megabytes)."
+    },
+    {
+        "Offsets": 88,
+        "OffHex": "58",
+        "Name": "SMF30URB",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Maximum virtual storage in bytes allocated from the user subpools (less than 16 megabytes)."
+    },
+    {
+        "Offsets": 92,
+        "OffHex": "5C",
+        "Name": "SMF30EUR",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Maximum virtual storage in bytes allocated from the user subpools (greater than 16 megabytes)."
+    },
+    {
+        "Offsets": 96,
+        "OffHex": "60",
+        "Name": "SMF30RGN",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Region size established, in 1K units, rounded up to a 4K boundary. The contents of this field is determined as follows:"
+    },
+    {
+        "Offsets": 100,
+        "OffHex": "64",
+        "Name": "SMF30DSV",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Amount of user key data space and hiperspace virtual storage (high water mark) used during the step/job (in megabytes). Must be in key 8 or higher, and the creator of the dataspace must be in problem program state. If these two conditions are not true, this field contains zeros."
+    },
+    {
+        "Offsets": 104,
+        "OffHex": "68",
+        "Name": "SMF30PIE",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of unblocked pages that were paged in from expanded storage."
+    },
+    {
+        "Offsets": 108,
+        "OffHex": "6C",
+        "Name": "SMF30POE",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of unblocked pages that were paged out to expanded storage."
+    },
+    {
+        "Offsets": 112,
+        "OffHex": "70",
+        "Name": "SMF30BIA",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of blocked pages that were paged in from auxiliary storage."
+    },
+    {
+        "Offsets": 116,
+        "OffHex": "74",
+        "Name": "SMF30BOA",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of blocked pages that were paged out to auxiliary storage."
+    },
+    {
+        "Offsets": 120,
+        "OffHex": "78",
+        "Name": "SMF30BIE",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of blocked pages that were paged in from expanded storage."
+    },
+    {
+        "Offsets": 124,
+        "OffHex": "7C",
+        "Name": "SMF30BOE",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of blocked pages that were paged out to expanded storage."
+    },
+    {
+        "Offsets": 128,
+        "OffHex": "80",
+        "Name": "SMF30KIA",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of blocks that were paged in from auxiliary storage."
+    },
+    {
+        "Offsets": 132,
+        "OffHex": "84",
+        "Name": "SMF30KOA",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of blocks that were paged out to auxiliary storage."
+    },
+    {
+        "Offsets": 136,
+        "OffHex": "88",
+        "Name": "SMF30KIE",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of blocks that were paged in from expanded storage."
+    },
+    {
+        "Offsets": 140,
+        "OffHex": "8C",
+        "Name": "SMF30KOE",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of blocks that were paged out to expanded storage."
+    },
+    {
+        "Offsets": 144,
+        "OffHex": "90",
+        "Name": "SMF30PSF",
+        "Length": 8,
+        "Format": "binary",
+        "type":"ms",
+        "Description": "Number of CPU page seconds for the IARVSERV shared central storage frames in use by this address space, in page milliseconds."
+    },
+    {
+        "Offsets": 152,
+        "OffHex": "98",
+        "Name": "SMF30PAI",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of IARVSERV shared pages that were paged in from auxiliary storage in this address space."
+    },
+    {
+        "Offsets": 156,
+        "OffHex": "9C",
+        "Name": "SMF30PEI",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of IARVSERV shared pages that were paged in from expanded storage in this address space."
+    },
+    {
+        "Offsets": 160,
+        "OffHex": "A0",
+        "Name": "SMF30ERS",
+        "Length": 8,
+        "Format": "binary",
+        "type":"ms",
+        "Description": "Expanded storage page residency time in page-milliseconds."
+    },
+    {
+        "Offsets": 168,
+        "OffHex": "A8",
+        "Name": "SMF30MEM",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "MEMLIMIT value in 1MB units as determined at step initialization time, after IEFUSI processing. An increase in the system default memlimit value is not reflected here. The maximum value of this field is '00000FFFFFFFF000'x that is equivalent to MEMLIMIT having no limit."
+    },
+    {
+        "Offsets": 176,
+        "OffHex": "B0",
+        "Name": "SMF30MES",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Source of Memlimit, which is one of the following:"
+    },
+    {
+        "Offsets": 177,
+        "OffHex": "B1",
+        "Name": "missed1",
+        "Length": 7,
+        "Format": null,
+        "type":null,
+        "Description": "Reserved."
+    },
+    {
+        "Offsets": 184,
+        "OffHex": "B8",
+        "Name": "SMF30HVR",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "High water mark for the number of real storage frames that is used to back 64-bit private storage."
+    },
+    {
+        "Offsets": 192,
+        "OffHex": "C0",
+        "Name": "SMF30HVA",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Start of changeHigh water mark for the amount of auxiliary storage that is used to back 64-bit private storage. This value is a total of the number of paging data set slots and storage-class memory (SCM) blocks.End of change"
+    },
+    {
+        "Offsets": 200,
+        "OffHex": "C8",
+        "Name": "SMF30HVO",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Amount of 64-bit private storage in bytes that is obtained by this step or job. This includes guarded virtual storage."
+    },
+    {
+        "Offsets": 208,
+        "OffHex": "D0",
+        "Name": "SMF30HVH",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "High water mark for the number of usable bytes of 64-bit private storage that is obtained by this step or job. This does not include guarded virtual storage."
+    },
+    {
+        "Offsets": 216,
+        "OffHex": "D8",
+        "Name": "SMF30HSO",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Amount of 64-bit shared storage in bytes, which this step or job has addressability or access to."
+    },
+    {
+        "Offsets": 224,
+        "OffHex": "E0",
+        "Name": "SMF30HSH",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "High water mark for the number of usable bytes of 64-bit shared storage, which this step or job has access to."
+    }
+]

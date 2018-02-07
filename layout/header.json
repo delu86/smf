@@ -1,0 +1,309 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": "0",
+        "Name": "SMF30LEN",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Record Length. This field along with the next, are referred to as the RDW (record descriptor word). See Standard SMF record header for a detailed description."
+    },
+    {
+        "Offsets": 2,
+        "OffHex": "2",
+        "Name": "SMF30SEG",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Segment descriptor (see record length field)."
+    },
+    {
+        "Offsets": 4,
+        "OffHex": "4",
+        "Name": "SMF30FLG",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "System indicator:"
+    },
+    {
+        "Offsets": 5,
+        "OffHex": "5",
+        "Name": "SMF30RTY",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Record type 30 (X'1E')."
+    },
+    {
+        "Offsets": 6,
+        "OffHex": "6",
+        "Name": "SMF30TME",
+        "Length": 4,
+        "Format": "binary",
+        "type":"time_hos",
+        "Description": "Time since midnight, in hundredths of a second, that the record was moved to the SMF buffer."
+    },
+    {
+        "Offsets": 10,
+        "OffHex": "A",
+        "Name": "SMF30DTE",
+        "Length": 4,
+        "Format": "packed",
+        "type": "packed_date",
+        "Description": "Date that the record was moved to the SMF buffer, in the form 0cyydddF (in local time). See Standard SMF record header for a detailed description."
+    },
+    {
+        "Offsets": 14,
+        "OffHex": "E",
+        "Name": "SMF30SID",
+        "Length": 4,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "System identification (from the SID parameter)."
+    },
+    {
+        "Offsets": 18,
+        "OffHex": "12",
+        "Name": "SMF30WID",
+        "Length": 4,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Work type indicator for the address space. The value identifies the type of address space that is being reported on (for example: \u201cSTC\u201d for started tasks and system address spaces, \u201cTSO\u201d for TSO/E users, etc)."
+    },
+    {
+        "Offsets": 22,
+        "OffHex": "16",
+        "Name": "SMF30STP",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Record subtype. For a list of the record subtypes, see Record Type 30 (1E) \u2014 Common address space work."
+    },
+    {
+        "Offsets": 24,
+        "OffHex": "18",
+        "Name": "subsystem.json",
+        "Length": 8,
+        "type":"reference",
+        "Format": "xxxxllnn",
+        "Description": "Offset to subsystem section from start of record, including the record descriptor word (RDW)."
+    },
+    {
+        "Offsets": 32,
+        "OffHex": "20",
+        "Name": "identification.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to identification section from start of record, including the record descriptor word (RDW)."
+    },
+    {
+        "Offsets": 40,
+        "OffHex": "28",
+        "Name": "io_activity.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to I/O activity section from start of record, including the record descriptor word (RDW)."
+    },
+    {
+        "Offsets": 48,
+        "OffHex": "30",
+        "Name": "completion.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to completion section from start of record, including the record descriptor word (RDW)."
+    },
+   
+    {
+        "Offsets": 56,
+        "OffHex": "38",
+        "Name": "processor_accounting.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to processor section from start of record, including the record descriptor word (RDW)."
+    },
+    {
+        "Offsets": 64,
+        "OffHex": "40",
+        "Name": "accounting.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to accounting section from start of record, including the record descriptor word (RDW)."
+    },
+    {
+        "Offsets": 72,
+        "OffHex": "48",
+        "Name": "storage.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to storage section from start of record, including the record descriptor word (RDW)."
+    },
+    {
+        "Offsets": 80,
+        "OffHex": "50",
+        "Name": "performance.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to performance section from start of record, including the record descriptor word (RDW)."
+    },
+    {
+        "Offsets": 88,
+        "OffHex": "58",
+        "Name": "operator.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to operator section from start of record, including the record descriptor word (RDW)."
+    },
+    {
+        "Offsets": 96,
+        "OffHex": "60",
+        "Name": "excp.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to the execute channel program (EXCP) section from start of record, including the record descriptor word (RDW)."
+    },
+    {
+        "Offsets": 104,
+        "OffHex": "68",
+        "Name": "SMF30EOR",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of execute channel program (EXCP) sections in subsequent records. When this number exceeds two bytes, it is not valid. See SMF30EOS for the correct value."
+    },
+    {
+        "Offsets": 106,
+        "OffHex": "6A",
+        "Name": "SMF30RVD",
+        "Length": 2,
+        "Format": "null",
+        "type":"null",
+        "Description": "Reserved."
+    },
+    {
+        "Offsets": 108,
+        "OffHex": "6C",
+        "Name": "SMF30EOS",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of execute channel program (EXCP) sections in subsequent records."
+    },
+    {
+        "Offsets": 112,
+        "OffHex": "70",
+        "Name": "app_mvs_resource.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to APPC/MVS resource section from start of record, including the record descriptor word (RDW)."
+    },
+    {
+        "Offsets": 120,
+        "OffHex": "78",
+        "Name": "app_mvs_cumulative_resource.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to APPC/MVS cumulative resource section from start of record, including the record descriptor word (RDW)."
+    },
+    {
+        "Offsets": 128,
+        "OffHex": "80",
+        "Name": "zos_unix_process.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to OpenMVS process section."
+    },
+    {
+        "Offsets": 136,
+        "OffHex": "88",
+        "Name": "SMF30OPM",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of z/OS UNIX process sections on subsequent records."
+    },
+    {
+        "Offsets": 140,
+        "OffHex": "8C",
+        "Name": "usage_data.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to first usage data section from the start of the record, including the record descriptor word (RDW)."
+    },
+    {
+        "Offsets": 148,
+        "OffHex": "94",
+        "Name": "SMF30UDS",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of usage data sections in subsequent records."
+    },
+    {
+        "Offsets": 152,
+        "OffHex": "98",
+        "Name": "automati_restart.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to first automatic restart management section."
+    },
+    {
+        "Offsets": 160,
+        "OffHex": "A0",
+        "Name": "SMF30RMS",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of automatic restart management sections in subsequent records."
+    },
+    {
+        "Offsets": 164,
+        "OffHex": "A4",
+        "Name": "multisystem_enclave_remote_system.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to the Multisystem Enclave Remote Data section."
+    },
+    {
+        "Offsets": 172,
+        "OffHex": "AC",
+        "Name": "SMF30MOS",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of MultiSystem Enclave Remote System Data sections in subsequent records."
+    },
+    {
+        "Offsets": 176,
+        "OffHex": "B0",
+        "Name": "counter_data.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to the Counter Data Section. "
+    },
+    {
+        "Offsets": 184,
+        "OffHex": "B8",
+        "Name": "zedc_usage.json",
+        "Length": 8,
+        "type":"reference" ,
+        "Format": "xxxxllnn",
+        "Description": "Offset to the zEDC usage statistics section.  "
+    }
+]

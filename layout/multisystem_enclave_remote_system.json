@@ -1,0 +1,38 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": "0",
+        "Name": "SMF30MRS",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "System name on which enclaves created by this address space executed."
+    },
+    {
+        "Offsets": 8,
+        "OffHex": "8",
+        "Name": "SMF30MRA",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "CPU rate adjustment factor for the system named by SMF30MRS. This is the number of sixteenths of one microsecond of CPU time per CPU service unit."
+    },
+    {
+        "Offsets": 12,
+        "OffHex": "C",
+        "Name": "SMF30MRD",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "CPU time, in hundredths of a second, accumulated by dependent enclaves that executed on the system named by SMF30MRS."
+    },
+    {
+        "Offsets": 16,
+        "OffHex": "10",
+        "Name": "SMF30MRI",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "CPU time, in hundredths of a second, accumulated by independent enclaves that executed on the system named by SMF30MRS."
+    }
+]

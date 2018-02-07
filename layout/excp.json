@@ -1,0 +1,74 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": "0",
+        "Name": "SMF30DEV",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Device class."
+    },
+    {
+        "Offsets": 1,
+        "OffHex": "1",
+        "Name": "SMF30UTP",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Unit type."
+    },
+    {
+        "Offsets": 2,
+        "OffHex": "2",
+        "Name": "SMF30CUA",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Device number."
+    },
+    {
+        "Offsets": 4,
+        "OffHex": "4",
+        "Name": "SMF30DDN",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "DD Name used to access the data set."
+    },
+    {
+        "Offsets": 12,
+        "OffHex": "C",
+        "Name": "SMF30BLK",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Count of blocks issued for the device against the data set. This field has a maximum value of X'FFFFFFFF' = 4,294,967,295. If it exceeds that value it will wrap to zero and then continue to increase again for additional blocks transferred."
+    },
+    {
+        "Offsets": 16,
+        "OffHex": "10",
+        "Name": "SMF30BSZ",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Largest blocksize of the data set"
+    },
+    {
+        "Offsets": 18,
+        "OffHex": "12",
+        "Name": "SMF30DCT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Device connect time for this data set (in 128 micro-second units). For DIV object, device connect time is not collected by SMF. however, this field may not always be zero. For example, if a user is using a DIV data set and calls a VSAM utility to process it using the same DD statement, this will result in device connect time being charged by VSAM to the DIV object."
+    },
+    {
+        "Offsets": 22,
+        "OffHex": "16",
+        "Name": "SMF30XBS",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Block size value."
+    }
+]

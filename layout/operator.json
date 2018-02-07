@@ -1,0 +1,56 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": "0",
+        "Name": "SMF30PDM",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of non-specific DASD mounts."
+    },
+    {
+        "Offsets": 4,
+        "OffHex": "4",
+        "Name": "SMF30PRD",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of specific DASD mounts."
+    },
+    {
+        "Offsets": 8,
+        "OffHex": "8",
+        "Name": "SMF30PTM",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of non-specific tape mounts."
+    },
+    {
+        "Offsets": 12,
+        "OffHex": "C",
+        "Name": "SMF30TPR",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of specific tape mounts."
+    },
+    {
+        "Offsets": 16,
+        "OffHex": "10",
+        "Name": "SMF30MTM",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of non-specific MSS mounts. As of MVS/SP4.1, this field is no longer valid, and contains zeroes."
+    },
+    {
+        "Offsets": 20,
+        "OffHex": "14",
+        "Name": "SMF30MSR",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of specific MSS mounts. As of MVS/SP4.1, this field is no longer valid, and contains zeroes."
+    }
+]

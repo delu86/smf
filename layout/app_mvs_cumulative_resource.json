@@ -1,0 +1,74 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": "0",
+        "Name": "SMF30CN",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total number of conversations associated with the transaction program (TP) ID, both currently active and deallocated."
+    },
+    {
+        "Offsets": 4,
+        "OffHex": "4",
+        "Name": "SMF30CNA",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total number of all conversations allocated."
+    },
+    {
+        "Offsets": 8,
+        "OffHex": "8",
+        "Name": "SMF30SEN",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total number of times the transaction program (TP) issued a Send call."
+    },
+    {
+        "Offsets": 12,
+        "OffHex": "C",
+        "Name": "SMF30DAT",
+        "Length": 8,
+        "Format": "long_floating_point_hex",
+        "type":"unsigned",
+        "Description": "Total amount of data sent by the transaction program (TP) in bytes (long floating point)."
+    },
+    {
+        "Offsets": 20,
+        "OffHex": "14",
+        "Name": "SMF30REC",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total number of times the transaction program (TP) issued a Receive call."
+    },
+    {
+        "Offsets": 24,
+        "OffHex": "18",
+        "Name": "SMF30DAR",
+        "Length": 8,
+        "Format": "long_floating_point_hex",
+        "type":"unsigned",
+        "Description": "Total amount of data received by the transaction program (TP) in bytes (long floating point)."
+    },
+    {
+        "Offsets": 32,
+        "OffHex": "20",
+        "Name": "SMF30TAC",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total number of active conversations."
+    },
+    {
+        "Offsets": 36,
+        "OffHex": "24",
+        "Name": "SMF30ATR",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total number of APPC/MVS transactions programs scheduled by the APPC/MVS transaction scheduler (ASCH)."
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": 0,
+        "Name": "SMF30SCC",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Step completion code"
+    },
+    {
+        "Offsets": 2,
+        "OffHex": 2,
+        "Name": "SMF30STI",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Step/Job termination indicator"
+    },
+    {
+        "Offsets": 4,
+        "OffHex": 4,
+        "Name": "SMF30ARC",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Abend reason code."
+    }
+]

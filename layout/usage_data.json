@@ -1,0 +1,92 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": "0",
+        "Name": "SMF30UPO",
+        "Length": 16,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Product owner or vendor name (specified on the PRODOWNER option of the IFAUSAGE macro)."
+    },
+    {
+        "Offsets": 16,
+        "OffHex": "10",
+        "Name": "SMF30UPN",
+        "Length": 16,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Product name (specified on the PRODNAME option of the IFAUSAGE macro)."
+    },
+    {
+        "Offsets": 32,
+        "OffHex": "20",
+        "Name": "SMF30UPV",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Product version (if specified on the PRODVERS option of the IFAUSAGE macro or \u2018NONE\u2019)."
+    },
+    {
+        "Offsets": 40,
+        "OffHex": "28",
+        "Name": "SMF30UPQ",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Product qualifier (if specified on the PRODQUAL option of the IFAUSAGE macro or \u2018NONE\u2019)."
+    },
+    {
+        "Offsets": 48,
+        "OffHex": "30",
+        "Name": "SMF30UPI",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Product ID (if specified on the PRODID option of the IFAUSAGE macro or \u2018NONE\u2019)."
+    },
+    {
+        "Offsets": 56,
+        "OffHex": "38",
+        "Name": "SMF30UCT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Product TCB Time (in hundredths of a second)."
+    },
+    {
+        "Offsets": 60,
+        "OffHex": "3C",
+        "Name": "SMF30UCS",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Product SRB Time (in hundredths of a second)."
+    },
+    {
+        "Offsets": 64,
+        "OffHex": "40",
+        "Name": "SMF30URD",
+        "Length": 8,
+        "Format": "various",
+        "type":"unknown",
+        "Description": "Product specific resource data (specified on the DATA option on the IFAUSAGE macro FUNCTIONDATA request). SMF30UDF identifies the format of the data in this field."
+    },
+    {
+        "Offsets": 72,
+        "OffHex": "48",
+        "Name": "SMF30UDF",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Data format of value in SMF30URD"
+    },
+    {
+        "Offsets": 74,
+        "OffHex": "4A",
+        "Name": "missed1 ",
+        "Length": 2,
+        "Format": "null",
+        "type":"null",
+        "Description": "Reserved."
+    }
+]

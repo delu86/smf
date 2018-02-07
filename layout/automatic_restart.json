@@ -1,0 +1,110 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": "0",
+        "Name": "SMF30RNM",
+        "Length": 16,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Element name."
+    },
+    {
+        "Offsets": 16,
+        "OffHex": "10",
+        "Name": "SMF30RTP",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Element type."
+    },
+    {
+        "Offsets": 24,
+        "OffHex": "18",
+        "Name": "SMF30RRG",
+        "Length": 16,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Restart group for element in SMF30RNM."
+    },
+    {
+        "Offsets": 40,
+        "OffHex": "28",
+        "Name": "SMF30RSN",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "The system name for the system on which the element was initially started. blank, for the initial start."
+    },
+    {
+        "Offsets": 48,
+        "OffHex": "30",
+        "Name": "SMF30RGT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "The time (local) when the element issued the IXCARM macro with the REGISTER parameter, in hundredths of a second."
+    },
+    {
+        "Offsets": 52,
+        "OffHex": "34",
+        "Name": "SMF30RGD",
+        "Length": 4,
+        "Format": "binary",
+        "type":"date",
+        "Description": "The date when the element issued the REGISTER request, in the form 0cyydddF. See Standard SMF record header for a detailed description."
+    },
+    {
+        "Offsets": 56,
+        "OffHex": "38",
+        "Name": "SMF30RWT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "The time (local) when the element issued the IXCARM macro with the WAITPRED parameter, in hundredths of a second. This field will be zero if this function was not requested."
+    },
+    {
+        "Offsets": 60,
+        "OffHex": "3C",
+        "Name": "SMF30RWD",
+        "Length": 4,
+        "Format": "binary",
+        "type":"date",
+        "Description": "The date when the element issued IXCARM with the WAITPRED parameter, in the form 0cyydddF (where \u2018F\u2019 is the sign). This field will be zero if this function was not requested."
+    },
+    {
+        "Offsets": 64,
+        "OffHex": "40",
+        "Name": "SMF30RYT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "The time (local) when the element issued the IXCARM macro with the READY parameter, in hundredths of a second."
+    },
+    {
+        "Offsets": 68,
+        "OffHex": "44",
+        "Name": "SMF30RYD",
+        "Length": 4,
+        "Format": "binary",
+        "type":"date",
+        "Description": "The date when this element issued the IXCARM macro with the READY parameter, in the format 0cyydddF (where \u2018F\u2019 is the sign)."
+    },
+    {
+        "Offsets": 72,
+        "OffHex": "48",
+        "Name": "SMF30RTT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "The time (local) when the element was deregistered, in hundredths of a second. This field will be zero if this element is not yet deregistered or if it ended abnormally."
+    },
+    {
+        "Offsets": 76,
+        "OffHex": "4C",
+        "Name": "SMF30RTD",
+        "Length": 4,
+        "Format": "binary",
+        "type":"date",
+        "Description": "The date when this element was deregistered, in the format 0cyydddF. See Standard SMF record header for a detailed description. This field will be zero if this element is not yet deregistered or if it ended abnormally."
+    }
+]

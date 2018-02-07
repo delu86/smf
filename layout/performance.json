@@ -1,0 +1,442 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": "0",
+        "Name": "SMF30SRV",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total service units. This field grows to X'FFFFFFFF' and then wraps back to zero and continues growing. When wrapping occurs, SMF30SRV_INV is set to on. SMF30SRV_L is the 8-byte equivalent of this field."
+    },
+    {
+        "Offsets": 4,
+        "OffHex": "4",
+        "Name": "SMF30CSU",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "CPU service units.This field grows to X'FFFFFFFF' and then wraps back to zero and continues growing. When wrapping occurs, SMF30CSU_INV is set to on. SMF30CSU_L is the 8-byte equivalent of this field."
+    },
+    {
+        "Offsets": 8,
+        "OffHex": "8",
+        "Name": "SMF30SRB",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Service request block (SRB) service units.This field grows to X'FFFFFFFF' and then wraps back to zero and continues growing. When wrapping occurs, SMF30SRB_INV is set to on. SMF30SRB_L is the 8-byte equivalent of this field."
+    },
+    {
+        "Offsets": 12,
+        "OffHex": "C",
+        "Name": "SMF30IO",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "I/O service units.This field grows to X'FFFFFFFF' and then wraps back to zero and continues growing. When wrapping occurs, SMF30IO_INV is set to on. SMF30IO_L is the 8\u2013byte equivalent of this field."
+    },
+    {
+        "Offsets": 16,
+        "OffHex": "10",
+        "Name": "SMF30MSO",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Main storage occupancy (MSO) service units.This field grows to X'FFFFFFFF' and then wraps back to zero and continues growing. When wrapping occurs, SMF30MSO_INV is set to on. SMF30MSO_L is the 8\u2013byte equivalent of this field."
+    },
+    {
+        "Offsets": 20,
+        "OffHex": "14",
+        "Name": "SMF30TAT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"ms_units_1024",
+        "Description": "System resources manager (SRM) transaction active time, in 1024-microsecond units."
+    },
+    {
+        "Offsets": 24,
+        "OffHex": "18",
+        "Name": "SMF30SUS",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Copy of RmctAdjC when this SMF record was produced, number of sixteenths of one CPU microsecond per CPU service unit."
+    },
+    {
+        "Offsets": 28,
+        "OffHex": "1C",
+        "Name": "SMF30RES",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "System resources manager (SRM) transaction residency time, in 1024-microsecond units. That is the amount of time the SRM transaction was in real storage."
+    },
+    {
+        "Offsets": 32,
+        "OffHex": "20",
+        "Name": "SMF30TRS",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of system resources manager (SRM) transactions."
+    },
+    {
+        "Offsets": 36,
+        "OffHex": "24",
+        "Name": "SMF30WLM",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Workload name. This field is blank (X\u201840\u2019) when in workload management compatibility mode."
+    },
+    {
+        "Offsets": 44,
+        "OffHex": "2C",
+        "Name": "SMF30SCN",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Service class name. This field will contain SYSOTHER during the time of a WLM POLICY switch."
+    },
+    {
+        "Offsets": 52,
+        "OffHex": "34",
+        "Name": "SMF30GRN",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Resource group name."
+    },
+    {
+        "Offsets": 60,
+        "OffHex": "3C",
+        "Name": "SMF30RCN",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Report class name. This field is blank (X\u201840\u2019) during the time of a WLM POLICY switch."
+    },
+    {
+        "Offsets": 68,
+        "OffHex": "44",
+        "Name": "SMF30ETA",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Independent enclave transaction active time in 1024-microsecond units."
+    },
+    {
+        "Offsets": 72,
+        "OffHex": "48",
+        "Name": "SMF30ESU",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Independent enclave CPU service units.This field grows to X'FFFFFFFF' and then wraps back to zero and continues growing. When wrapping occurs, SMF30ESU_INV is set to on. SMF30ESU_L is the 8\u2013byte equivalent of this field."
+    },
+    {
+        "Offsets": 76,
+        "OffHex": "4C",
+        "Name": "SMF30ETC",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Independent enclave transaction count."
+    },
+    {
+        "Offsets": 80,
+        "OffHex": "50",
+        "Name": "SMF30PFL",
+        "Length": 16,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Scheduling environment name. Binary zeros if no scheduling environment is specified."
+    },
+    {
+        "Offsets": 96,
+        "OffHex": "60",
+        "Name": "SMF30JQT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"ms_units_1024",
+        "Description": "Job preparation time. This is the elapsed time before the job was first queued for execution. It excludes time to read the job into the system. It includes delays incurred waiting for and during conversion, such as when eligible systems are not active to convert the job. If the JOB statement specified TYPRUN=JCLHOLD, this time is 0. The time is in 1024-microsecond units."
+    },
+    {
+        "Offsets": 100,
+        "OffHex": "64",
+        "Name": "SMF30RQT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"ms_units_1024",
+        "Description": "Time following job preparation when the job was ineligible for execution due to either the job's eligible systems being inactive or the job's scheduling environment not being available. The time is in 1024-microsecond units."
+    },
+    {
+        "Offsets": 104,
+        "OffHex": "68",
+        "Name": "SMF30HQT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"ms_units_1024",
+        "Description": "Time following job preparation when the job was ineligible for execution for reasons not included in SMF30RQT. This includes job hold, job class hold, job queue hold, duplicate jobname serialization, and job class execution limits. If the JOB statement specified TYPRUN=HOLD, the time that the job is held for this reason is not included. The time is in 1024-microsecond units."
+    },
+    {
+        "Offsets": 108,
+        "OffHex": "6C",
+        "Name": "SMF30SQT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"ms_units_1024",
+        "Description": "Time the job was eligible for execution. This is the amount of time between the end of job conversion and Problem Program Start time (SMF30PPS). The time is in 1024-microsecond units. For JES3, this field includes time the job was ineligible for execution."
+    },
+    {
+        "Offsets": 112,
+        "OffHex": "70",
+        "Name": "SMF30PF1",
+        "Length": 1,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Performance section flag byte:"
+    },
+    {
+        "Offsets": 113,
+        "OffHex": "71",
+        "Name": "SMF30PF2",
+        "Length": 1,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Performance section flag byte:"
+    },
+    {
+        "Offsets": 114,
+        "OffHex": "72",
+        "Name": "SMF30INV",
+        "Length": 1,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Performance section flag byte:"
+    },
+    {
+        "Offsets": 115,
+        "OffHex": "73",
+        "Name": "SMF30ZEP",
+        "Length": 1,
+        "Format": "binary",
+        "type":"string",
+        "Description": "Contains information associated with a potential future function and no further details are available at this time."
+    },
+    {
+        "Offsets": 116,
+        "OffHex": "74",
+        "Name": "SMF30JPN",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Subsystem collection name from IWMCLSFY SUBCOLN."
+    },
+    {
+        "Offsets": 124,
+        "OffHex": "7C",
+        "Name": "SMF30MSC",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "MSO Service Definition Coefficient (SDC) scaled by 10000."
+    },
+    {
+        "Offsets": 128,
+        "OffHex": "80",
+        "Name": "SMF30CPC",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "CPU Service Definition Coefficient (SDC) scaled by 10."
+    },
+    {
+        "Offsets": 130,
+        "OffHex": "82",
+        "Name": "SMF30LOC",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "IOC Service Definition Coefficient (SDC) scaled by 10."
+    },
+    {
+        "Offsets": 132,
+        "OffHex": "84",
+        "Name": "SMF30SRC",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "SRB Service Definition Coefficient (SDC) scaled by 10."
+    },
+    {
+        "Offsets": 134,
+        "OffHex": "86",
+        "Name": "SMF30ZNF",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Normalization factor for IFA service time. Used to convert between real IFA times and \u201cnormalized\u201d IFA times, that is, the equivalent time on a standard CP. Multiply SMF30_TIME_ON_IFA by this value and divide by 256 to calculate the normalized IFA time."
+    },
+    {
+        "Offsets": 136,
+        "OffHex": "88",
+        "Name": "SMF30SNF",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Normalization factor for zIIP service time. Used to convert between real zIIP times and normalized zIIP times, that is, the equivalent time on a standard CP. Multiply SMF30_TIME_ON_zIIP by this value and divide by 256 to calculate the normalized zIIP time."
+    },
+    {
+        "Offsets": 138,
+        "OffHex": "8A",
+        "Name": "SMF30RS6",
+        "Length": 6,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Reserved."
+    },
+    {
+        "Offsets": 144,
+        "OffHex": "90",
+        "Name": "SMF30SRV_L",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total service units. This is the 8\u2013byte equivalent of SMF30SRV. The value of this field continues to grow after SMF30SRV_INV is set."
+    },
+    {
+        "Offsets": 152,
+        "OffHex": "98",
+        "Name": "SMF30CSU_L",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "CPU service units. This is the 8\u2013byte equivalent of SMF30CSU. The value of this field continues to grow after SMF30CSU_INV is set."
+    },
+    {
+        "Offsets": 160,
+        "OffHex": "A0",
+        "Name": "SMF30SRB_L",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "SRB service units. This is the 8\u2013byte equivalent of SMF30SRB. The value of this field continues to grow after SMF30SRB_INV is set."
+    },
+    {
+        "Offsets": 168,
+        "OffHex": "A8",
+        "Name": "SMF30IO_L",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "I/O service units. This is the 8\u2013byte equivalent of SMF30IO. The value of this field continues to grow after SMF30IO_INV is set."
+    },
+    {
+        "Offsets": 176,
+        "OffHex": "B0",
+        "Name": "SMF30MSO_L",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "MSO service units. This is the 8\u2013byte equivalent of SMF30MSO. The value of this field continues to grow after SMF30MSO_INV is set."
+    },
+    {
+        "Offsets": 184,
+        "OffHex": "B8",
+        "Name": "SMF30ESU_L",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "ESU service units. This is the 8\u2013byte equivalent of SMF30ESU. The value of this field continues to grow after SMF30ESU_INV is set."
+    },
+    {
+        "Offsets": 192,
+        "OffHex": "C0",
+        "Name": "SMF30ACB",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Contains information associated with a potential future function, no further details are provided at this time."
+    },
+    {
+        "Offsets": 193,
+        "OffHex": "C1",
+        "Name": "SMF30CR",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Contains information associated with a potential future function, no further details are provided at this time."
+    },
+    {
+        "Offsets": 194,
+        "OffHex": "C2",
+        "Name": "SMF30_Capacity_ Change_Cnt",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "The number of processor capacity changes that occurred since the previous interval or event interval. This number will be greater than 1 when the number of processor capacity changes exceeded the number specified in the MAXEVENTINTRECS parmlib option."
+    },
+    {
+        "Offsets": 196,
+        "OffHex": "C4",
+        "Name": "SMF30_RCTPCPUA _Actual",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Physical CPU adjustment factor (this is the adjustment factor for converting CPU time to equivalent service, in basic-mode with all processors online). Based on model capacity rating."
+    },
+    {
+        "Offsets": 200,
+        "OffHex": "C8",
+        "Name": "SMF30_RCTPCPUA _Nominal",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Physical CPU adjustment factor (this is the adjustment factor for converting CPU time to equivalent service in basic-mode with all processors online). Based on nominal model capacity rating."
+    },
+    {
+        "Offsets": 204,
+        "OffHex": "CC",
+        "Name": "SMF30_RCTPCPUA_ scaling_factor",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Scaling factor for SMF30_RCTPCPUA_actual and SMF30_RCTPCPUA_nominal."
+    },
+    {
+        "Offsets": 208,
+        "OffHex": "D0",
+        "Name": "SMF30_Capacity _Adjustment_Ind",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "When:"
+    },
+    {
+        "Offsets": 209,
+        "OffHex": "D1",
+        "Name": "SMF30_Capacity_ Change_Rsn",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Indicates the reason that is associated with the present value contained in SMF30_Capacity_Adjustment_Ind. The bit values of this field correspond to those described in RMCTZ_Capacity_Adjustment_Indication of the IRARMCTZ mapping macro. (See MVS\u2122 Data Areas. )"
+    },
+    {
+        "Offsets": 210,
+        "OffHex": "D2",
+        "Name": "SMF30_Capacity_ Flags",
+        "Length": 1,
+        "Format": "binary",
+        "Description": "Processor capacity flags."
+    },
+    {
+        "Offsets": 212,
+        "OffHex": "D4",
+        "Name": "SMF30_RMCTADJN _Nominal",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Nominal CPU rate adjustment"
+    }
+]

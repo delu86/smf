@@ -1,0 +1,74 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": "0",
+        "Name": "SMF30DC",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of conversations, both currently active and deallocated, associated with the transaction program ID."
+    },
+    {
+        "Offsets": 4,
+        "OffHex": "4",
+        "Name": "SMF30DCA",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of all conversations allocated."
+    },
+    {
+        "Offsets": 8,
+        "OffHex": "8",
+        "Name": "SMF30DSC",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of times the transaction program issued a Send call."
+    },
+    {
+        "Offsets": 12,
+        "OffHex": "C",
+        "Name": "SMF30DDS",
+        "Length": 8,
+        "Format": "long_floating_point_hex",
+        "type":"unsigned",
+        "Description": "Amount of data, in bytes, sent by the transaction program."
+    },
+    {
+        "Offsets": 20,
+        "OffHex": "14",
+        "Name": "SMF30DRC",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of times the transaction program issued a Receive call."
+    },
+    {
+        "Offsets": 24,
+        "OffHex": "18",
+        "Name": "SMF30DDR",
+        "Length": 8,
+        "Format": "long_floating_point_hex",
+        "type":"unsigned",
+        "Description": "Amount of data, in bytes, received by the transaction program."
+    },
+    {
+        "Offsets": 32,
+        "OffHex": "20",
+        "Name": "SMF30DAC",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of active conversations."
+    },
+    {
+        "Offsets": 36,
+        "OffHex": "24",
+        "Name": "SMF30DTR",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of APPC/MVS transactions programs scheduled by the APPC/MVS transaction scheduler (ASCH)."
+    }
+]

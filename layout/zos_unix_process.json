@@ -1,0 +1,218 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": "0",
+        "Name": "SMF30OPI",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "z/OS UNIX process ID."
+    },
+    {
+        "Offsets": 4,
+        "OffHex": "4",
+        "Name": "SMF30OPG",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "z/OS UNIX process group ID."
+    },
+    {
+        "Offsets": 8,
+        "OffHex": "8",
+        "Name": "SMF30OUI",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "z/OS UNIX process user ID."
+    },
+    {
+        "Offsets": 12,
+        "OffHex": "C",
+        "Name": "SMF30OUG",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "z/OS UNIX process user group ID."
+    },
+    {
+        "Offsets": 16,
+        "OffHex": "10",
+        "Name": "SMF30OSI",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "z/OS UNIX process session ID."
+    },
+    {
+        "Offsets": 20,
+        "OffHex": "14",
+        "Name": "SMF30OSC",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of z/OS UNIX services requested by the process. When the z/OS UNIX parmlib option SYSCALL_COUNTS is set to NO, there is no collection of data for the count of syscalls. When gathering syscall counts for a job, do not switch between SYSCALL_COUNTS=YES and SYSCALL_COUNTS=NO because doing so can lead to inaccurate values in the SMF30OSC field."
+    },
+    {
+        "Offsets": 24,
+        "OffHex": "18",
+        "Name": "SMF30OST",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Total CPU time (in hundredths of a second) accumulated by z/OS UNIX services requested by the process. Note that the value in SMF30OST is already included in fields SMF30CPT or SMF30CPS. When the z/OS UNIX parmlib option SYSCALL_COUNTS is set to NO, there is no collection of data for CPU usage. When gathering CPU usage for a job, do not switch between SYSCALL_COUNTS=YES and SYSCALL_COUNTS=NO because doing so can lead to inaccurate values in the SMF30OST field."
+    },
+    {
+        "Offsets": 28,
+        "OffHex": "1C",
+        "Name": "SMF30ODR",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of z/OS UNIX directory reads for the process."
+    },
+    {
+        "Offsets": 32,
+        "OffHex": "20",
+        "Name": "SMF30OFR",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Read I/O block count for z/OS UNIX regular files."
+    },
+    {
+        "Offsets": 36,
+        "OffHex": "24",
+        "Name": "SMF30OFW",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Write I/O block count for z/OS UNIX regular files."
+    },
+    {
+        "Offsets": 40,
+        "OffHex": "28",
+        "Name": "SMF30OPR",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Read I/O block count for z/OS UNIX pipes and AF_UNIX sockets."
+    },
+    {
+        "Offsets": 44,
+        "OffHex": "2C",
+        "Name": "SMF30OPW",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Write I/O block count for z/OS UNIX pipes and AF_UNIX sockets."
+    },
+    {
+        "Offsets": 48,
+        "OffHex": "30",
+        "Name": "SMF30OSR",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Reserved."
+    },
+    {
+        "Offsets": 52,
+        "OffHex": "34",
+        "Name": "SMF30OSW",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Reserved."
+    },
+    {
+        "Offsets": 56,
+        "OffHex": "38",
+        "Name": "SMF30OLL",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of pathname lookup calls to the logical file system."
+    },
+    {
+        "Offsets": 60,
+        "OffHex": "3C",
+        "Name": "SMF30OLP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of pathname lookup calls to the physical file system."
+    },
+    {
+        "Offsets": 64,
+        "OffHex": "40",
+        "Name": "SMF30OGL",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of pathname generation calls to the logical file system."
+    },
+    {
+        "Offsets": 68,
+        "OffHex": "44",
+        "Name": "SMF30OGP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of pathname generation calls to the physical file system to determine a pathname."
+    },
+    {
+        "Offsets": 72,
+        "OffHex": "48",
+        "Name": "SMF30OPP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Parent process ID."
+    },
+    {
+        "Offsets": 76,
+        "OffHex": "4C",
+        "Name": "SMF30OKR",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Reserved."
+    },
+    {
+        "Offsets": 80,
+        "OffHex": "50",
+        "Name": "SMF30OKW",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Reserved."
+    },
+    {
+        "Offsets": 84,
+        "OffHex": "54",
+        "Name": "SMF30OMS",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Reserved."
+    },
+    {
+        "Offsets": 88,
+        "OffHex": "58",
+        "Name": "SMF30OMR",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Reserved."
+    },
+    {
+        "Offsets": 92,
+        "OffHex": "5C",
+        "Name": "SMF30OSY",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of times the sync() function was called"
+    }
+]

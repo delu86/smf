@@ -1,0 +1,451 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": "0",
+        "Name": "SMF30PTY",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Reserved."
+    },
+    {
+        "Offsets": 2,
+        "OffHex": "2",
+        "Name": "SMF30TFL",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Invalid timer flags"
+    },
+    {
+        "Offsets": 4,
+        "OffHex": "4",
+        "Name": "SMF30CPT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "All standard CPU step time in hundredths of a second. Includes enclave time, preemptable class SRB time, client SRB time. Also includes time consumed by zAAP or zIIP eligible work running on a standard processor."
+    },
+    {
+        "Offsets": 8,
+        "OffHex": "8",
+        "Name": "SMF30CPS",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Step CPU time under the service request block (SRB), in hundredths of a second. You can calculate the SRB time in microseconds (1/100 of a second using the following formula: (SMF30SRB*10)/SMF30SRC * SMF30SUS/16 = SRB time in microsecondsThis value includes the value in field SMF30OST."
+    },
+    {
+        "Offsets": 12,
+        "OffHex": "C",
+        "Name": "SMF30ICU",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Initiator CPU time under the task control block (TCB), in hundredths of a second. This field is set at step termination."
+    },
+    {
+        "Offsets": 16,
+        "OffHex": "10",
+        "Name": "SMF30ISB",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Initiator CPU time under the service request block (SRB), in hundredths of a second. This field is set at step termination."
+    },
+    {
+        "Offsets": 20,
+        "OffHex": "14",
+        "Name": "SMF30JVU",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Step vector CPU time, in hundredths of a second."
+    },
+    {
+        "Offsets": 24,
+        "OffHex": "18",
+        "Name": "SMF30IVU",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Initiator vector CPU time, in hundredths of a second. This field is set at step termination."
+    },
+    {
+        "Offsets": 28,
+        "OffHex": "1C",
+        "Name": "SMF30JVA",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Step vector affinity time, in hundredths of a second."
+    },
+    {
+        "Offsets": 32,
+        "OffHex": "20",
+        "Name": "SMF30IVA",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Initiator vector affinity time, in hundredths of a second. This field is set at step termination."
+    },
+    {
+        "Offsets": 36,
+        "OffHex": "24",
+        "Name": "SMF30IST",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Interval start time for type 30 subtype 2 and 3 records, in hundredths of a second."
+    },
+    {
+        "Offsets": 40,
+        "OffHex": "28",
+        "Name": "SMF30IDT",
+        "Length": 4,
+        "Format": "packed",
+        "type":"packed_date",
+        "Description": "Interval start date for type 30 subtype 2 and 3 records, in the form 0cyydddF. See Standard SMF record header for a detailed description."
+    },
+    {
+        "Offsets": 44,
+        "OffHex": "2C",
+        "Name": "SMF30IIP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Amount of CPU time used to process I/O interrupts, in hundredths of a second."
+    },
+    {
+        "Offsets": 48,
+        "OffHex": "30",
+        "Name": "SMF30RCT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Amount of CPU time used by the region control task (RCT), in hundredths of a second."
+    },
+    {
+        "Offsets": 52,
+        "OffHex": "34",
+        "Name": "SMF30HPT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "CPU time consumed for the step, in hundredths of a second, to support requests for data to be transferred between a hiperspace and an address space, when the hiperspace is backed by expanded storage. The CPU time may vary depending on the availability of expanded storage."
+    },
+    {
+        "Offsets": 56,
+        "OffHex": "38",
+        "Name": "SMF30CSC",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Integrated Cryptographic Service Facility/MVS (ICSF/MVS) service count. This is the number of cryptographic instructions executed on behalf of caller (within caller's address space)."
+    },
+    {
+        "Offsets": 60,
+        "OffHex": "3C",
+        "Name": "SMF30DMI",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "ADMF-Number of pages moved with ADMF WRITE operation."
+    },
+    {
+        "Offsets": 64,
+        "OffHex": "40",
+        "Name": "SMF30DMO",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "ADMF-Number of pages moved with ADMF READ operation."
+    },
+    {
+        "Offsets": 68,
+        "OffHex": "44",
+        "Name": "SMF30ASR",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Additional CPU time accumulated by the preemptable SRBs and client SRBs for this job, in hundredths of a second. This value is also included in the value in SMF30CPT."
+    },
+    {
+        "Offsets": 72,
+        "OffHex": "48",
+        "Name": "SMF30ENC",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "CPU time used by the independent enclave, but only when in the WLM enclave. Note that independent enclave time on an IFA is not included. See field SMF30_ENCLAVE_TIME_ON_IFA for that value. SMF30ENC is also part of the value in SMF30CPT."
+    },
+    {
+        "Offsets": 76,
+        "OffHex": "4C",
+        "Name": "SMF30DET",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "CPU time used by the dependent enclave, but only when in the WLM enclave. Note that dependent enclave time on an IFA is not included - see field SMF30_DEP_ENCLAVE_TIME_ON_IFA for that value. SMF30DET is also part of the value in SMF30CPT."
+    },
+    {
+        "Offsets": 80,
+        "OffHex": "50",
+        "Name": "SMF30CEP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"ms_units",
+        "Description": "Cumulative CPU time consumed for an address space or job while enqueue promoted (in 1.024 millisecond units)."
+    },
+    {
+        "Offsets": 84,
+        "OffHex": "54",
+        "Name": "SMF30TF2",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Additional timer flags"
+    },
+    {
+        "Offsets": 85,
+        "OffHex": "55",
+        "Name": "SMF30T32",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Additional failure flags."
+    },
+    {
+        "Offsets": 86,
+        "OffHex": "56",
+        "Name": "SMF30T33",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Additional failure flags."
+    },
+    {
+        "Offsets": 87,
+        "OffHex": "57",
+        "Name": "missed_0",
+        "Length": 1,
+        "Format": null,
+        "type":null,
+        "Description": "Reserved."
+    },
+    {
+        "Offsets": 88,
+        "OffHex": "58",
+        "Name": "SMF30_TIME_ON_IFA",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Accumulation of Time is in hundredths of a second (includes enclave time)."
+    },
+    {
+        "Offsets": 92,
+        "OffHex": "5C",
+        "Name": "SMF30_ENCLAVE_TIME _ON_IFA",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Accumulation of Time is in hundredths of a second."
+    },
+    {
+        "Offsets": 96,
+        "OffHex": "60",
+        "Name": "SMF30_DEP_ENCLAVE _TIME_ON_IFA",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Accumulation of "
+    },
+    {
+        "Offsets": 100,
+        "OffHex": "64",
+        "Name": "SMF30_TIME_IFA_ ON_CP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Accumulation of Time is in hundredths of a second (includes enclave time)."
+    },
+    {
+        "Offsets": 104,
+        "OffHex": "68",
+        "Name": "SMF30_ENCLAVE_TIME_ IFA_ON_CP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Accumulation of Time is in hundredths of a second."
+    },
+    {
+        "Offsets": 108,
+        "OffHex": "6C",
+        "Name": "SMF30_DEP_ENCLAVE_ TIME_IFA_ON_CP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Accumulation of Time is in hundredths of a second."
+    },
+    {
+        "Offsets": 112,
+        "OffHex": "70",
+        "Name": "SMF30CEPI",
+        "Length": 4,
+        "Format": "binary",
+        "type":"ms_units",
+        "Description": "CPU time consumed for an address space or job while enqueue promoted (in 1.024 millisecond units). Contains only the time consumed during the interval (not cumulative)."
+    },
+    {
+        "Offsets": 116,
+        "OffHex": "74",
+        "Name": "SMF30_TIME_ON_zIIP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Accumulation of Time is in hundredths of a second (includes enclave time)."
+    },
+    {
+        "Offsets": 120,
+        "OffHex": "78",
+        "Name": "SMF30_ENCLAVE_TIME_ ON_zIIP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Accumulation of Time is in hundredths of a second."
+    },
+    {
+        "Offsets": 124,
+        "OffHex": "7C",
+        "Name": "SMF30_DEPENC_TIME_ ON_zIIP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Accumulation of Time is in hundredths of a second."
+    },
+    {
+        "Offsets": 128,
+        "OffHex": "80",
+        "Name": "SMF30_TIME_zIIP_ON_CP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Accumulation of Time is in hundredths of a second (includes enclave time)."
+    },
+    {
+        "Offsets": 132,
+        "OffHex": "84",
+        "Name": "SMF30_ENCLAVE_TIME_ zIIP_ON_CP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Accumulation of Time is in hundredths of a second."
+    },
+    {
+        "Offsets": 136,
+        "OffHex": "88",
+        "Name": "SMF30_DEPENC_TIME_ zIIP_ON_CP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Accumulation of"
+    },
+    {
+        "Offsets": 140,
+        "OffHex": "8C",
+        "Name": "SMF30_ENCLAVE_TIME_ zIIP_QUAL",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Normalized enclave time qualified to be on zIIP in hundredths of a second."
+    },
+    {
+        "Offsets": 144,
+        "OffHex": "90",
+        "Name": "SMF30_DEPENC_TIME_ zIIP_QUAL",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Normalized dependent enclave time qualified to be on zIIP in hundredths of a second"
+    },
+    {
+        "Offsets": 148,
+        "OffHex": "94",
+        "Name": "SMF30CRP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"ms_units",
+        "Description": "CPU time consumed for an address space or job while promoted because of chronic resource contention (in 1.024 millisecond units). For interval records, this field contains only the time consumed during the interval itself."
+    },
+    {
+        "Offsets": 152,
+        "OffHex": "98",
+        "Name": "SMF30ICU_Step_Term",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "CPU TCB time spent by the Initiator during job step termination processing. This field is the step termination portion of SMF30ICU that is reported in the next step end record."
+    },
+    {
+        "Offsets": 156,
+        "OffHex": "9C",
+        "Name": "SMF30ICU_Step_Init",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "CPU TCB time spent by the Initiator during job step initialization processing. This field is the step initialization portion of SMF30ICU for this step end record."
+    },
+    {
+        "Offsets": 160,
+        "OffHex": "A0",
+        "Name": "SMF30ISB_Step_Term",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "CPU SRB time spent by the Initiator during job step termination processing. This field is the step termination portion of SMF30ISB that is reported in the next step end record."
+    },
+    {
+        "Offsets": 164,
+        "OffHex": "A4",
+        "Name": "SMF30ISB_Step_Init",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "CPU SRB time spent by the Initiator during job step initialization processing. This field is the step initialization portion of SMF30ISB for this step end record."
+    },
+    {
+        "Offsets": 168,
+        "OffHex": "A8",
+        "Name": "SMF30_Missed_SMF30BLK",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Accumulated value of I/O block counts when serialization could not be obtained for accumulating the value to SMF30BLK. This value is maintained at the job step level as opposed to the DD level of its SMF30BLK counterpart."
+    },
+    {
+        "Offsets": 172,
+        "OffHex": "AC",
+        "Name": "SMF30_Missed_SMF30DCT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Accumulated value of device connect time when serialization could not be obtained for accumulating the value to SMF30DCT. This value is maintained at the job step level as opposed to the DD level of its SMF30DCT counterpart."
+    },
+    {
+        "Offsets": 176,
+        "OffHex": "B0",
+        "Name": "SMF30_Highest_Task_CPU_Percent",
+        "Length": 2,
+        "Format": "binary",
+        "Description": "For interval records, the largest percentage of CPU time used by any task in the address space, rounded to the nearest integer. The percentage value is calculated as: TCB time * 100 / interval time. For step-end and job-end records, the value is the largest reported interval value."
+    },
+    {
+        "Offsets": 178,
+        "OffHex": "B2",
+        "Name": "SMF30_Highest_Task_CPU_Program",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Program name running in the task that used the largest percentage of CPU time in this address space. This field corresponds to SMF30_Highest_Task_CPU_Percent. A value of blanks indicates that no task reported any CPU time in the address space, or that the CPU time could not be obtained. A value of '????????' indicates that the program name could not be obtained for the task that reported the highest percentage of CPU time."
+    }
+]

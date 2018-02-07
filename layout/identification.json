@@ -1,0 +1,281 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": "0",
+        "Name": "SMF30JBN",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Job or session name. The job name, time, and date that the reader recognized the JOB card (for this job) constitute the job log identification."
+    },
+    {
+        "Offsets": 8,
+        "OffHex": "8",
+        "Name": "SMF30PGM",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Program name (taken from PGM= parameter on EXEC card). If a backward reference was used, this field contains PGM=*.DD."
+    },
+    {
+        "Offsets": 16,
+        "OffHex": "10",
+        "Name": "SMF30STM",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Step name (taken from name on EXEC card)."
+    },
+    {
+        "Offsets": 24,
+        "OffHex": "18",
+        "Name": "SMF30UIF",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "User-defined identification field (taken from common exit parameter area, not from USER=parameter on job statement)."
+    },
+    {
+        "Offsets": 32,
+        "OffHex": "20",
+        "Name": "SMF30JNM",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "JES job identifier. Jobs scheduled by the APPC/MVS transaction scheduler (ASCH) start with an \u201cA\u201d followed by a seven-digit number."
+    },
+    {
+        "Offsets": 40,
+        "OffHex": "28",
+        "Name": "SMF30STN",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Step number (first step = 1, and so on)."
+    },
+    {
+        "Offsets": 42,
+        "OffHex": "2A",
+        "Name": "SMF30CLS",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Job class (blank for TSO/E session or started tasks)."
+    },
+    {
+        "Offsets": 43,
+        "OffHex": "2B",
+        "Name": "SMF30JF1",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Flag word"
+    },
+    {
+        "Offsets": 44,
+        "OffHex": "2C",
+        "Name": "SMF30PGN",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Beginning with z/OS\u00ae V1R3, this field is always zero."
+    },
+    {
+        "Offsets": 46,
+        "OffHex": "2E",
+        "Name": "SMF30JPT",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "JES input priority. If no value is specified for the PRTY parameter (on the JOB card), this field contains:For JES3, the default priority specified on the JES3 STANDARDS initialization card For JES2, a zero. Note that JES2 does not use the priority value reported in the field. (The JES2 job selection priority is requested using the JES2 PRIORITY control statement.)"
+    },
+    {
+        "Offsets": 48,
+        "OffHex": "30",
+        "Name": "SMF30AST",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Device allocation start time, in hundredths of a second."
+    },
+    {
+        "Offsets": 52,
+        "OffHex": "34",
+        "Name": "SMF30PPS",
+        "Length": 4,
+        "Format": "binary",
+        "type":"hos",
+        "Description": "Problem program start time, in hundredths of a second."
+    },
+    {
+        "Offsets": 56,
+        "OffHex": "38",
+        "Name": "SMF30SIT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"time_hos",
+        "Description": "Time since midnight, in hundredths of a second, that the initiator selected this step or job."
+    },
+    {
+        "Offsets": 60,
+        "OffHex": "3C",
+        "Name": "SMF30STD",
+        "Length": 4,
+        "Format": "packed",
+        "type":"packed_date",
+        "Description": "Date that the initiator selected this step, in the form 0cyydddF. See Standard SMF record header for a detailed description."
+    },
+    {
+        "Offsets": 64,
+        "OffHex": "40",
+        "Name": "SMF30RST",
+        "Length": 4,
+        "Format": "binary",
+        "type":"time_hos",
+        "Description": "Time since midnight, in hundredths of a second, that the reader recognized the JOB card (for this job)."
+    },
+    {
+        "Offsets": 68,
+        "OffHex": "44",
+        "Name": "SMF30RSD",
+        "Length": 4,
+        "Format": "packed",
+        "type":"packed_date",
+        "Description": "Date that the reader recognized the JOB card (for this job), in the form 0cyydddF. See Standard SMF record header for a detailed description."
+    },
+    {
+        "Offsets": 72,
+        "OffHex": "48",
+        "Name": "SMF30RET",
+        "Length": 4,
+        "Format": "binary",
+        "type":"time_hos",
+        "Description": "Time since midnight, in hundredths of a second, that the reader recognized the end of the JCL being read for the job or started task (reader stop time). For TSO/E this is the logon enqueue time."
+    },
+    {
+        "Offsets": 76,
+        "OffHex": "4C",
+        "Name": "SMF30RED",
+        "Length": 4,
+        "Format": "packed",
+        "type":"packed_date",
+        "Description": "Date that the reader recognized the end of the JCL being read for the job or started task (reader stop date), in the form 0 cyydddF. See Standard SMF record header for a detailed description."
+    },
+    {
+        "Offsets": 80,
+        "OffHex": "50",
+        "Name": "SMF30USR",
+        "Length": 20,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Programmer's name."
+    },
+    {
+        "Offsets": 100,
+        "OffHex": "64",
+        "Name": "SMF30GRP",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "RACF\u00ae group ID. 0 = RACF is not active."
+    },
+    {
+        "Offsets": 108,
+        "OffHex": "6C",
+        "Name": "SMF30RUD",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "RACF user ID. 0 = RACF is not active."
+    },
+    {
+        "Offsets": 116,
+        "OffHex": "74",
+        "Name": "SMF30TID",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "RACF terminal ID. This field is zero if RACF is not active (or the user is not a terminal user)."
+    },
+    {
+        "Offsets": 124,
+        "OffHex": "7C",
+        "Name": "SMF30TSN",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "Terminal symbolic name."
+    },
+    {
+        "Offsets": 132,
+        "OffHex": "84",
+        "Name": "SMF30PSN",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "The name of the step that invoked the procedure. This field contains blanks if not part of a procedure."
+    },
+    {
+        "Offsets": 140,
+        "OffHex": "8C",
+        "Name": "SMF30CL8",
+        "Length": 8,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "8-character job class (left justified, padded with blanks). For JES2, taken from the SMF30CLS field (if not specified), blank for TSO session or started tasks. For JES3, taken from CLASS= parameter on //* MAIN card (if valid), or the default (JES3BATCH)."
+    },
+    {
+        "Offsets": 148,
+        "OffHex": "94",
+        "Name": "SMF30ISS",
+        "Length": 8,
+        "Format": "binary",
+        "type":"tod",
+        "Description": "Time and date that the interval started for subtype 2 and 3 records, in time-of-day (TOD) format, an unsigned 64-bit fixed-point number where bit 51 is equivalent to 1 microsecond. The representation of this value in local time is stored in SMF30IST and SMF30IDT. Variations in setting the local time can make the times appear to be out of synchronization."
+    },
+    {
+        "Offsets": 156,
+        "OffHex": "9C",
+        "Name": "SMF30IET",
+        "Length": 8,
+        "Format": "binary",
+        "type":"tod",
+        "Description": "Time and date that the interval ended for subtype 2 and 3 records, in time-of-day (TOD) format, an unsigned 64-bit fixed-point number where bit 51 is equivalent to 1 microsecond. If you requested synchronized interval recording, you can use this field to compare this record with other records generated at the end of the same interval."
+    },
+    {
+        "Offsets": 164,
+        "OffHex": "A4",
+        "Name": "SMF30SSN",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Substep number. This field is set to zero for non-z/OS UNIX steps. When the z/OS UNIX exec function is requested, a new substep is begun and this value is incremented."
+    },
+    {
+        "Offsets": 168,
+        "OffHex": "A8",
+        "Name": "SMF30EXN",
+        "Length": 16,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Program name. For a z/OS UNIX program, this contains the name, for up to 16 bytes, starting after the last slash in the file name, of the program that was run. The z/OS UNIX name ends with the null character X'00'."
+    },
+    {
+        "Offsets": 184,
+        "OffHex": "B8",
+        "Name": "SMF30ASI",
+        "Length": 2,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Address space identifier."
+    },
+    {
+        "Offsets": 186,
+        "OffHex": "BA",
+        "Name": "SMF30COR",
+        "Length": 64,
+        "Format": "EBCDIC",
+        "type":"string",
+        "Description": "JES job correlator."
+    }
+]

@@ -1,0 +1,182 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": "0",
+        "Name": "SMF30INP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of card-image records in DD DATA and DD* data sets read by the reader for the map. This field is not set for subtypes 2 or 3."
+    },
+    {
+        "Offsets": 4,
+        "OffHex": "4",
+        "Name": "SMF30TEP",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total blocks transferred (accumulated execute channel program (EXCP) counts - valid up to X'FFFFFFFE', zero and invalid when SMF30TEF is set)"
+    },
+    {
+        "Offsets": 8,
+        "OffHex": "8",
+        "Name": "SMF30TPT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of TPUTS (terminal writes) for a TSO/E session. If a batch job or a started task successfully processes TPUTs, this field might be non-zero for batch jobs or started tasks."
+    },
+    {
+        "Offsets": 12,
+        "OffHex": "C",
+        "Name": "SMF30TGT",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of TGETS (terminal reads) for a TSO/E session."
+    },
+    {
+        "Offsets": 16,
+        "OffHex": "10",
+        "Name": "SMF30RDR",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Reader device class as defined in JESPARMS. 0 \u2014 for TSO/E sessions or started tasks."
+    },
+    {
+        "Offsets": 17,
+        "OffHex": "11",
+        "Name": "SMF30RDT",
+        "Length": 1,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Reader device type as defined in JESPARMS. 0 \u2014 for TSO/E sessions or started tasks."
+    },
+    {
+        "Offsets": 18,
+        "OffHex": "12",
+        "Name": "SMF30TCN",
+        "Length": 4,
+        "Format": "binary",
+        "type":"ms_units_128",
+        "Description": "Total device connect time (in 128 micro-second units) for this address space. For a DIV object, this field contains total device connect time for reads, writes, and re-reads."
+    },
+    {
+        "Offsets": 22,
+        "OffHex": "16",
+        "Name": "SMF30DCF",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Flag word "
+    },
+    {
+        "Offsets": 26,
+        "OffHex": "1A",
+        "Name": "SMF30RSB",
+        "Length": 2,
+        "Format": null,
+        "type":null,
+        "Description": "Reserved."
+    },
+    {
+        "Offsets": 28,
+        "OffHex": "1C",
+        "Name": "SMF30TRR",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total address space REREAD count."
+    },
+    {
+        "Offsets": 32,
+        "OffHex": "20",
+        "Name": "SMF30AIC",
+        "Length": 4,
+        "Format": "binary",
+        "type":"ms_units_128",
+        "Description": "DASD I/O connect time, in 128-microsecond units, for address space plus dependent enclaves. Note that the value of RqsvAIC for FICON\u00ae channel utilization cannot be calculated. For more information, see the footnote."
+    },
+    {
+        "Offsets": 36,
+        "OffHex": "24",
+        "Name": "SMF30AID",
+        "Length": 4,
+        "Format": "binary",
+        "type":"ms_units_128",
+        "Description": "DASD I/O disconnect time, in 128-microsecond units, for address space plus dependent enclaves."
+    },
+    {
+        "Offsets": 40,
+        "OffHex": "28",
+        "Name": "SMF30AIW",
+        "Length": 4,
+        "Format": "binary",
+        "type":"ms_units_128",
+        "Description": "DASD I/O pending plus control unit queue time, in 128-microsecond units, for address space plus dependent enclaves."
+    },
+    {
+        "Offsets": 44,
+        "OffHex": "2C",
+        "Name": "SMF30AIS",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "DASD I/O start subchannel count for address space plus dependent enclaves."
+    },
+    {
+        "Offsets": 48,
+        "OffHex": "30",
+        "Name": "SMF30EIC",
+        "Length": 4,
+        "Format": "binary",
+        "type":"ms_units_128",
+        "Description": "DASD I/O connect time, in 128-microsecond units, for independent enclaves owned by the address space. Note that the value of RqsvEIC for FICON channel utilization cannot be calculated. For more information, see the footnote."
+    },
+    {
+        "Offsets": 52,
+        "OffHex": "34",
+        "Name": "SMF30EID",
+        "Length": 4,
+        "Format": "binary",
+        "type":"ms_units_128",
+        "Description": "DASD I/O disconnect time, in 128-microsecond units, for independent enclaves owned by the address space."
+    },
+    {
+        "Offsets": 56,
+        "OffHex": "38",
+        "Name": "SMF30EIW",
+        "Length": 4,
+        "Format": "binary",
+        "type":"ms_units_128",
+        "Description": "DASD I/O pending plus control unit queue time, in 128-microsecond units, for independent enclaves owned by the address space."
+    },
+    {
+        "Offsets": 60,
+        "OffHex": "3C",
+        "Name": "SMF30EIS",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "DASD I/O start subchannel count for independent enclaves."
+    },
+    {
+        "Offsets": 64,
+        "OffHex": "40",
+        "Name": "SMF30TEX",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total blocks transferred - accumulated EXCP counts. This field is the 8-byte equivalent of SMF30TEP, but this field remains valid after SMF30TEP is invalid."
+    },
+    {
+        "Offsets": 72,
+        "OffHex": "48",
+        "Name": "SMF30DAS",
+        "Length": 4,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Number of DDs that had their DD accounting information suppressed."
+    }
+]

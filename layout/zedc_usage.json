@@ -1,0 +1,74 @@
+[
+    {
+        "Offsets": 0,
+        "OffHex": 0,
+        "Name": "SMF30_US_ComprReq",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total number of compression and decompression requests (both supervisor-state and problem-state requests)"
+    },
+    {
+        "Offsets": 8,
+        "OffHex": 8,
+        "Name": "SMF30_US_ComprReq_Prob",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total number of problem-state compression and decompression requests."
+    },
+    {
+        "Offsets": 16,
+        "OffHex": 10,
+        "Name": "SMF30_US_QueueTime",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total queue time. The amount of time, in microseconds, from when the request was submitted until the adapter started executing the request."
+    },
+    {
+        "Offsets": 24,
+        "OffHex": 18,
+        "Name": "SMF30_US_ExecTime",
+        "Length": 8,
+        "Format": "binary",
+        "type":"ms",
+        "Description": "Total execution time, in microseconds."
+    },
+    {
+        "Offsets": 32,
+        "OffHex": 20,
+        "Name": "SMF30_US_Def_UncomprIn",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total number, in bytes, of uncompressed data input."
+    },
+    {
+        "Offsets": 40,
+        "OffHex": 28,
+        "Name": "SMF30_US_Def_ComprOut",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total number, in bytes, of compressed data output."
+    },
+    {
+        "Offsets": 48,
+        "OffHex": 30,
+        "Name": "SMF30_US_Inf_ComprIn",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total number, in bytes, of compressed data input."
+    },
+    {
+        "Offsets": 56,
+        "OffHex": 38,
+        "Name": "SMF30_US_Inf_DecomprOut",
+        "Length": 8,
+        "Format": "binary",
+        "type":"unsigned",
+        "Description": "Total number, in bytes, of decompressed data output."
+    }
+]
