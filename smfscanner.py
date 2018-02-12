@@ -51,8 +51,6 @@ class SMFfileScanner:
 
 
 builder = smfrecordbuilder.NonSPannedRecordBuilder()
-manager = smfrecordmanager.InfoSMFRecordManager()
+manager = smfrecordmanager.TransformerRecordManager()
 assembler = SMFfileScanner(builder, manager)
-assembler.parse(
-    "/Users/simonedeluca/workspace/python/smf/smf.gsy7.smfaltro.d171122.t220835"
-)
+assembler.parse("smf.gsy7.smfaltro.d171122.t220835")
